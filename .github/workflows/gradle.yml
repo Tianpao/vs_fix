@@ -27,14 +27,15 @@ jobs:
       with:
          gradle-version: 8.4
 
-    - name: Clean and Build with Gradle
-      run: ./gradlew clean build
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: application-artifact
         path: build/libs/*
+
+    - name: Clean and Build with Gradle
+      run: ./gradlew clean
 
     - name: Generate dependency graph
       uses: gradle/actions/dependency-submission@v4.0.0
