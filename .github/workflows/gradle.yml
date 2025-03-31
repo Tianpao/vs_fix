@@ -43,6 +43,3 @@ jobs:
       with:
         name: application-artifact
         path: build/libs/*
-
-    - name: Generate dependency graph
-      uses: gradle/actions/dependency-submission@v4.0.0
